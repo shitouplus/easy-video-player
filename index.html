@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.staticfile.org/vue/2.5.17/vue.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/x-template" id="player">
+    <easy-video-player :src="playUrl" :poster="poster"></easy-video-player>
+</script>
+
+</body>
+<script>
+  Vue.component('easy-video-player', EasyVideoPlayer)
+  new Vue({
+    el: '#app',
+    data: {
+      playUrl: 'http://intl.w.xk.miui.com/451a4b2ff292392e9eb85907904645ce',
+      poster: 'http://img.v.trend.mi.rozbuzz.com/wemedia/cover/89c3cf50ae0911e8988e593b4fd90442/61d6562ed1a7c506d50a8e7c67f949fb.png-290.webp'
+    },
+    template: '#player'
+  })
+</script>
+</html>

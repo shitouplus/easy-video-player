@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vue serve src/index.js",
     "build": "vue build -t lib -n EasyVideoPlayer -d dist src/index.js"
   },
   "keywords": [],
