@@ -2,12 +2,21 @@
   "name": "easy-video-player",
   "version": "1.0.0",
   "description": "easy video player",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shitouplus/easy-video-player"
+  },
+  "bugs": {
+    "url": "https://github.com/shitouplus/easy-video-player/issues"
+  },
+  "license": "MIT",
+  "main": "dist/EasyVideoPlayer.umd.min.js",
+  "browser": "dist/EasyVideoPlayer.umd.min.js",
+  "module": "dist/EasyVideoPlayer.common.js",
   "scripts": {
     "dev": "vue serve src/index.js",
     "build": "vue build -t lib -n EasyVideoPlayer -d dist src/index.js"
   },
   "keywords": ["h5 player", "video player"],
-  "author": "shitou",
-  "license": "ISC"
+  "author": "shitouplus"
 }
