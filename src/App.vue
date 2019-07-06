@@ -72,7 +72,7 @@
         type: String,
         default: 'auto',
         validator (val) {
-          return val === 'auto' || val === 'mete' || val === 'none'
+          return val === 'auto' || val === 'meta' || val === 'none'
         }
       },
       poster: String
@@ -118,6 +118,7 @@
     },
     methods: {
       preparePlay () {
+        this.$emit('load', this.$refs.video)
         this.loadVideo = true
         this.duration = this.$refs.video.duration
       },
@@ -127,9 +128,10 @@
       handlePlay () {
         this.$refs.video.play()
         this.status = 'playing'
-        this.$emit('play')
+        this.$emit('play', this.$refs.video)
       },
       handlePause () {
+        this.$emit('pause', this.$refs.video)
         this.$refs.video.pause()
         this.status = 'play'
 
@@ -144,7 +146,7 @@
           this.timer = null
         }
 
-        this.$emit('end')
+        this.$emit('end', this.$refs.video)
       },
       touchVideo () {
         this.status = 'pause'
@@ -199,6 +201,7 @@
       handleDragEnd () {
         this.enableDrag = false
         document.removeEventListener('mousemove', this.handleDrag)
+        this.$emit('seek', this.$refs.video)
       }
     },
     filters: {
