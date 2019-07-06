@@ -1,6 +1,8 @@
 .player {
     position: relative;
     display: inline-block;
+    user-select: none;
+    width: 360px;
 }
 
 .player__mask {
@@ -48,14 +50,109 @@
     height: 100%;
     top: 0;
     left: 0;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .player__video {
     vertical-align: top;
     width: 100%;
+    height: 100%;
 }
 
 .player__video--hidden {
     opacity: 0;
+}
+
+.player__error {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, .6);
+}
+
+.player__controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+    padding: 4px;
+}
+
+.player__progress-container {
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(133, 133, 133, 0.3);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.player__timer {
+    display: inline-block;
+    width: calc(100% - 24px);
+    font-size: 12px;
+    line-height: 12px;
+    margin-right: 4px;
+}
+
+.player__progress {
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.player__progress-btn {
+    position: absolute;
+    right: -3px;
+    top: -1px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #eee;
+}
+
+.player__full-screen {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/full.png") no-repeat center/contain;
+    cursor: pointer;
+}
+
+.player--full-screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+    background: #000;
+}
+
+.player__header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.palyer__title {
+    font-size: 14px;
+    color: #fff;
+    padding: 8px;
+}
+
+.player__watermark {
+    vertical-align: middle;
+    height: 30px;
 }

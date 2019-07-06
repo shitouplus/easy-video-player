@@ -13,18 +13,21 @@
 <div id="app"></div>
 
 <script type="text/x-template" id="player">
-    <easy-video-player :src="playUrl" :poster="poster"></easy-video-player>
+    <easy-video-player :src="playUrl" :poster="poster" :control="true" :title="title" :watermark="watermark"></easy-video-player>
 </script>
-<script>
-    Vue.component('easy-video-player', EasyVideoPlayer)
-    new Vue({
-      el: '#app',
-      data: {
-        playUrl: 'http://intl.w.xk.miui.com/451a4b2ff292392e9eb85907904645ce',
-        poster: './float.png'
-      },
-      template: '#player'
-    })
-</script>
+
 </body>
+<script>
+  Vue.component('easy-video-player', EasyVideoPlayer)
+  new Vue({
+    el: '#app',
+    data: {
+      playUrl: './video.mp4',
+      poster: './poster.webp',
+      title: 'easy vido player',
+      watermark: './float.png'
+    },
+    template: '#player'
+  })
+</script>
 </html>

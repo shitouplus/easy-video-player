@@ -1,13 +1,13 @@
 {
   "name": "easy-video-player",
   "version": "1.0.0",
-  "description": "",
+  "description": "easy video player",
   "main": "index.js",
   "scripts": {
     "dev": "vue serve src/index.js",
     "build": "vue build -t lib -n EasyVideoPlayer -d dist src/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["h5 player", "video player"],
+  "author": "shitou",
   "license": "ISC"
 }
