@@ -1,5 +1,13 @@
-# easy-video-player
+# easy-video-player ![https://www.npmjs.com/package/easy-video-player](https://img.shields.io/npm/v/easy-video-player.svg) ![](https://img.shields.io/badge/build-passing-brightgreen.svg)
 >简单的h5播放器，压缩后仅38k，适合在移动端使用。
+
+### 安装
+1. npm
+
+``` npm install easy-video-player ```
+2. script
+
+``` <script src="EasyVideoPlayer.umd.min.js"></script> ```
 
 ### 支持的属性
 | 属性 | 说明 | 类型 | 默认值 |
