@@ -1,4 +1,4 @@
-# easy-video-player ![https://www.npmjs.com/package/easy-video-player](https://img.shields.io/npm/v/easy-video-player.svg) ![](https://img.shields.io/badge/build-passing-brightgreen.svg)
+# easy-video-player ![https://www.npmjs.com/package/easy-video-player](https://img.shields.io/npm/v/easy-video-player.svg) ![https://github.com/shitouplus/easy-video-player](https://img.shields.io/badge/build-passing-brightgreen.svg)
 >简单的h5播放器，压缩后仅38k，适合在移动端使用。
 
 ### 安装
