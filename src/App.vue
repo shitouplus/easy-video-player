@@ -10,7 +10,7 @@
             :preload="preload"
             @ended="resetVideo"
             @click="touchVideo"
-            @canplay.once="preparePlay"
+            @loadedmetadata.once="preparePlay"
             @error="errorHandler"
             @timeupdate="progressHandler">
             <source v-for="(item, index) in sources" :key="index" :src="item">
